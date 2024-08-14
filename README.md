@@ -1,3 +1,3 @@
-# My Game is Cool!
+# Learning JavaScrpit in hopes of taking over the world
 
-Make sure you give it a good description here...
+Plans to take over the world will commence soon
