@@ -23,4 +23,3 @@ let runMyStuff = (x, y, f) => {
 }
 
 runMyStuff("JamesPatrick", 9, sayHi);
-
