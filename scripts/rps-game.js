@@ -14,9 +14,30 @@ let btnScissors = document.getElementById("btn-scissors");
 //function scissorsClicked(scissors) {console.log("scissors was selected");}
 //btnScissors?.addEventListener("click", scissorsClicked);
 
+let weapons = [
+    {
+        type: "Rock",
+        beats: "Scissors",
+    },
+    {
+        type: "Paper",
+        beats: "Rock",
+    },
+    {
+        type: "Scissors",
+        beats: "Paper",
+    },
+];
+
+function pickRandomWeapon(weapons) {
+    let randy = Math.floor(Math.random() * weapons.length);
+    return weapons[randy];
+}
+
 function playerControlHandler(e) {
     let weaponName = e.target.innerText;
     console.log(weaponName, " was selected")
 }
 
 playerControls?.addEventListener("click", playerControlHandler);
+
