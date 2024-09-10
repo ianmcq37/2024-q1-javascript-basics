@@ -5,14 +5,10 @@ let btnRock = document.getElementById("btn-rock")
 let btnPaper = document.getElementById("btn-paper")
 let btnScissors = document.getElementById("btn-scissors")
 
-//function rockClicked(rock) {console.log("rock was selected");}
-//btnRock?.addEventListener("click", rockClicked);
-
-//function paperClicked(paper) {console.log("paper was selected");}
-//btnPaper?.addEventListener("click", paperClicked);
-
-//function scissorsClicked(scissors) {console.log("scissors was selected");}
-//btnScissors?.addEventListener("click", scissorsClicked);
+/** @type {HTMLElement} */
+//@ts-ignore We know gameResultHeader is not null
+let gameResultHeader = document.getElementById("game-results")
+gameResultHeader.innerText = "Hey There!"
 
 let isGameOver = false
 
@@ -65,6 +61,7 @@ function playerControlHandler(e) {
 
     let computerWeapon = pickRandomWeapon(weapons)
     let result = determineOutcome(playerWeapon, computerWeapon)
+    gameResultHeader.innerText = result
     console.log(result)
 
 }
