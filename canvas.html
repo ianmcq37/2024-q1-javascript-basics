@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>canvas basics</title>
+		<style>
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: antiquewhite;
+			}
+			canvas {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="game-canvas"></canvas>
+		<script>
+			const canvas = document.getElementById("game-canvas");
+			function resize() {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+				console.log(canvas.width, canvas.height);
+			}
+			resize();
+			window.addEventListener("resize", resize);
+		</script>
+        <script type="module" src="scripts/canvas/app.js"></script>
+	</body>
+</html>
